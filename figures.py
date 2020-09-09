@@ -1,4 +1,15 @@
-class circle():
+class Square():
+    def __init__(self, side,):
+        self.side = side
+
+    def area(self):
+        return (self.side**2)
+
+    def perimeter(self):
+        return (4*self.side)
+
+
+class Circle():
     def __init__(self, r):
         self.radius = r
 
@@ -9,7 +20,7 @@ class circle():
         return 22/7 * (self.radius**2)
 
 
-class rhombus():
+class Rhombus():
     def perimeter(self):
         l = float(input("Enter the 1st side"))
         b = float(input("Enter the 2nd side"))
@@ -21,7 +32,7 @@ class rhombus():
         return 1/2*l*b
 
 
-class rectangle:
+class Rectangle:
     def __init__(self, length, breadth,):
         self.length = length
         self.breadth = breadth
