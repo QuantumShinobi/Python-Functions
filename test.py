@@ -29,5 +29,10 @@ class RectangleTestCase(unittest.TestCase):
         self.assertEqual(perimeter, rectangle.perimeter())
 
 
+class CuboidTestCase(unittest.TestCase):
+    def test_csa(self):
+        pass
+
+
 if __name__ == "__main__":
     unittest.main()

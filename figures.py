@@ -60,3 +60,19 @@ class cylinder:
 
     def total_surface_area(self):
         return 2*22/7*self.radius*(self.height+self.radius)
+
+
+class Cuboid():
+    def __init__(self, h, l, b):
+        self.height = h
+        self.lenght = l
+        self.width = b
+
+    def curved_surface_area(self):
+        return 2*self.height*(self.lenght + self.width)
+
+    def total_surface_area(self):
+        return 2*(self.height*self.lenght+self.height*self.width+self.width*self.lenght)
+
+    def volume(self):
+        return self.height*self.width*self.lenght
