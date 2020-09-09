@@ -14,3 +14,7 @@ class SquareTestCase(unittest.TestCase):
         square = Square(10)
         perimeter = 40
         self.assertEqual(perimeter, square.perimeter())
+
+
+if __name__ == "__main__":
+    unittest.main()
