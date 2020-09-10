@@ -1,2 +1,5 @@
-# python_functions
-basic maths and sci functions in python for common usage
+# Python functions
+
+Basic maths and science functions 🙂
+
+Uses Travis CI for testing
