@@ -1,3 +1,6 @@
+import math
+
+
 class Square():
     def __init__(self, side,):
         self.side = side
@@ -48,9 +51,13 @@ class Rectangle:
 
 
 # 3d figures
+# what is done
+# 1. cuboid
+# 2. cylinder
+# 3. cube
+# 4. cone
 
-
-class cylinder:
+class Cylinder:
     def __init__(self, r, h):
         self.radius = r
         self.height = h
@@ -60,6 +67,9 @@ class cylinder:
 
     def total_surface_area(self):
         return 2*22/7*self.radius*(self.height+self.radius)
+
+    def volume(self):
+        return 22/7*(self.radius**2)*self.height
 
 
 class Cuboid():
@@ -76,3 +86,36 @@ class Cuboid():
 
     def volume(self):
         return self.height*self.width*self.lenght
+
+
+class Cube():
+    def __init__(self, side):
+        self.a = side
+
+    def lateral_surface_area(self):
+        return 4*(self.a**2)
+
+    def total_surface_area(self):
+        return 6*(self.a**2)
+
+    def volume(self):
+        return self.a**3
+
+
+class Cone():
+    def __init__(self, height, radius, length=0):
+        self.h = height
+        if length == 0:
+            self.l = math.sqrt(height**2 + radius**2)
+        else:
+            self.l = length
+        self.r = radius
+
+    def total_surface_area(self):
+        return 22/7*self.l*self.r+22/7*(self.r**2)
+
+    def lateral_surface_area(self):
+        return 22/7*self.l*self.r
+
+    def volume(self):
+        return 22/7*(self.radius**2)*self.height*1/3
