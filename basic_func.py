@@ -1,5 +1,6 @@
-def sum():
-    num1 = float(input('What is the 1st num\n'))
-    num2 = float(input('What is the 2nd num\n'))
-    print(num1+num2)
-sum()
+def check_if_zero(num, value_to_inherit=0):
+    if num == 0:
+        return True
+    else:
+        value_to_inherit = num
+        return value_to_inherit

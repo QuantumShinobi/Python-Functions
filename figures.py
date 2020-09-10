@@ -1,6 +1,12 @@
 import math
 
 
+# 2d figs
+# 1. square
+# 2. rectangle
+# 3. triangle
+# 4. rhombus
+# 5. circle
 class Square():
     def __init__(self, side,):
         self.side = side
@@ -10,29 +16,6 @@ class Square():
 
     def perimeter(self):
         return (4*self.side)
-
-
-class Circle():
-    def __init__(self, r):
-        self.radius = r
-
-    def circumfrence(self):
-        return 22/7*self.radius * 2
-
-    def area(self):
-        return 22/7 * (self.radius**2)
-
-
-class Rhombus():
-    def perimeter(self):
-        l = float(input("Enter the 1st side"))
-        b = float(input("Enter the 2nd side"))
-        return 2*(l+b)
-
-    def area(self):
-        l = float(input("Enter the 1st daigonal"))
-        b = float(input("Enter the 2nd daigonal"))
-        return 1/2*l*b
 
 
 class Rectangle:
@@ -50,12 +33,72 @@ class Rectangle:
         return (2*(self.length+self.breadth))
 
 
+class Rhombus():
+    def perimeter(self):
+        l = float(input("Enter the 1st side"))
+        b = float(input("Enter the 2nd side"))
+        return 2*(l+b)
+
+    def area(self):
+        l = float(input("Enter the 1st daigonal"))
+        b = float(input("Enter the 2nd daigonal"))
+        return 1/2*l*b
+
+
+class Circle():
+    def __init__(self, r):
+        self.radius = r
+
+    def circumfrence(self):
+        return 22/7*self.radius * 2
+
+    def area(self):
+        return 22/7 * (self.radius**2)
+
+# Triangle is a bit confusing depending on the dimensions
+# class Triangle():
+#     def __init__(self, height, base, side1, side2, side3=0):
+#         if side3 == 0:
+#             side3 =base
+
+
 # 3d figures
 # what is done
 # 1. cuboid
 # 2. cylinder
 # 3. cube
 # 4. cone
+# 5. sphere
+# 6. hemisphere
+class Cube():
+    def __init__(self, side):
+        self.a = side
+
+    def lateral_surface_area(self):
+        return 4*(self.a**2)
+
+    def total_surface_area(self):
+        return 6*(self.a**2)
+
+    def volume(self):
+        return self.a**3
+
+
+class Cuboid():
+    def __init__(self, height, length, breadth):
+        self.height = height
+        self.lenght = length
+        self.width = breadth
+
+    def curved_surface_area(self):
+        return 2*self.height*(self.lenght + self.width)
+
+    def total_surface_area(self):
+        return 2*(self.height*self.lenght+self.height*self.width+self.width*self.lenght)
+
+    def volume(self):
+        return self.height*self.width*self.lenght
+
 
 class Cylinder:
     def __init__(self, r, h):
@@ -70,36 +113,6 @@ class Cylinder:
 
     def volume(self):
         return 22/7*(self.radius**2)*self.height
-
-
-class Cuboid():
-    def __init__(self, h, l, b):
-        self.height = h
-        self.lenght = l
-        self.width = b
-
-    def curved_surface_area(self):
-        return 2*self.height*(self.lenght + self.width)
-
-    def total_surface_area(self):
-        return 2*(self.height*self.lenght+self.height*self.width+self.width*self.lenght)
-
-    def volume(self):
-        return self.height*self.width*self.lenght
-
-
-class Cube():
-    def __init__(self, side):
-        self.a = side
-
-    def lateral_surface_area(self):
-        return 4*(self.a**2)
-
-    def total_surface_area(self):
-        return 6*(self.a**2)
-
-    def volume(self):
-        return self.a**3
 
 
 class Cone():
@@ -119,3 +132,32 @@ class Cone():
 
     def volume(self):
         return 22/7*(self.radius**2)*self.height*1/3
+
+
+class Sphere():
+    def __init__(self, radius):
+        self.r = radius
+
+    def surface_area(self):
+        return 4*22/7*(self.r**2)
+
+    def volume(self):
+        return 4/3*22/7*(self.r**3)
+
+
+class HemiSphere():
+    def __init__(self, radius, diameter=0):
+        self.r = radius
+        if diameter == 0:
+            self.d = 2*radius
+        else:
+            self.d = diameter
+
+    def total_surface_area(self):
+        return 3*22/7*(self.r**2)
+
+    def lateral_surface_area(self):
+        return 2*22/7*(self.r**2)
+
+    def volume(self):
+        return 4/3*22/7*(self.r**3)

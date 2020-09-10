@@ -2,6 +2,11 @@ import unittest
 from unittest import result
 from figures import *
 
+# tested
+# 1. square
+# 2 rectangle
+# 3 cuboid
+
 
 class SquareTestCase(unittest.TestCase):
 
@@ -31,7 +36,16 @@ class RectangleTestCase(unittest.TestCase):
 
 class CuboidTestCase(unittest.TestCase):
     def test_csa(self):
-        pass
+        cbd = Cuboid(10, 8, 7)
+        #    l=8, b=7
+        csa = 300
+        self.assertEqual(csa, cbd.curved_surface_area())
+
+    def test_tsa(self):
+        cbd = Cuboid(10, 8, 7)
+        #    l=8, b=7
+        csa = 300
+        self.assertNotEqual(csa, cbd.total_surface_area())
 
 
 if __name__ == "__main__":
