@@ -1,6 +1,6 @@
 # Python functions
 
-Basic maths and science functions 🙂
+Basic history and economics functions 🙂
 
 
 Uses Travis CI for testing
