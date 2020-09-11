@@ -1,6 +1,6 @@
 # Python functions
 
-Basic history and economics functions 🙂
+Basic history and economics functions (:smiley:)
 
 
 Uses Travis CI for testing
