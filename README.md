@@ -3,7 +3,7 @@
 Basic maths and science functions  :smiley:
 
 
-Uses Travis CI for testing
+Uses Travis CI (and our brain) for testing
 
 ![travis-ci](https://dwglogo.com/wp-content/uploads/2017/12/1200px-travis_ci_vector_logo.png)
 
