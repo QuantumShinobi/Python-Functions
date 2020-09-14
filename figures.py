@@ -16,6 +16,8 @@ class Square():
 
     def perimeter(self):
         return (4*self.side)
+    def diagonal(self) :
+        return ((2**0.5)*self.side)
 
 
 class Rectangle:
