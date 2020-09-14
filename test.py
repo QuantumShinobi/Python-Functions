@@ -6,6 +6,8 @@ from figures import *
 # 1. square
 # 2 rectangle
 # 3 cuboid
+# 4. triangle
+# 5. circle
 
 
 class SquareTestCase(unittest.TestCase):
@@ -19,8 +21,8 @@ class SquareTestCase(unittest.TestCase):
         square = Square(10)
         perimeter = 40
         self.assertEqual(perimeter, square.perimeter())
-        
-    def test_diagonal(self) :
+
+    def test_diagonal(self):
         square = Square(10)
         diagonal = ((10)**2 + (10)**2)**0.5
         self.assertEqual(diagonal, square.diagonal())
@@ -51,6 +53,22 @@ class CuboidTestCase(unittest.TestCase):
         #    l=8, b=7
         csa = 300
         self.assertNotEqual(csa, cbd.total_surface_area())
+
+
+# class TriangleTestCase(unittest.TestCase):
+    # def __init__(self, ):
+
+
+class CircleTestCase(unittest.TestCase):
+    def test_area(self):
+        circ = Circle(r=14)
+        res = 616
+        self.assertEqual(res, circ.area())
+
+    def test_perimeter(self):
+        circ = Circle(r=14)
+        res = 88
+        self.assertEqual(res, circ.area())
 
 
 if __name__ == "__main__":
