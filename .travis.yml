@@ -1,5 +1,7 @@
 language: python
 python:
   - 3.8.5
-script: python test.py
+script:
+  - python test.py
+  - python physics_test.py
 install: pip install -r requirements.txt
