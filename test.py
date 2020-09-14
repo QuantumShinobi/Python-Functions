@@ -19,6 +19,11 @@ class SquareTestCase(unittest.TestCase):
         square = Square(10)
         perimeter = 40
         self.assertEqual(perimeter, square.perimeter())
+        
+    def test_diagonal(self) :
+        square = Square(10)
+        diagonal = ((10)**2 + (10)**2)**0.5
+        self.assertEqual(diagonal, square.diagonal())
 
 
 class RectangleTestCase(unittest.TestCase):
