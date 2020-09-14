@@ -16,7 +16,7 @@ class SpeedTestCase(unittest.TestCase):
 
     def test_three(self):
         res = speed(10.246, 2.354)
-        res_test = 24.02687
+        res_test = 24.119084
         self.assertEqual(res_test, res)
 
 
