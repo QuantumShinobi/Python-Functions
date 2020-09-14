@@ -65,10 +65,10 @@ class CircleTestCase(unittest.TestCase):
         res = 616
         self.assertEqual(res, circ.area())
 
-    def test_perimeter(self):
+    def test_perimeter(self):  # 2*22/7*14
         circ = Circle(r=14)
         res = 88
-        self.assertEqual(res, circ.area())
+        self.assertEqual(res, circ.circumfrence())
 
 
 if __name__ == "__main__":
