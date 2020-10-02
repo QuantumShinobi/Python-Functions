@@ -16,7 +16,8 @@ class Square():
 
     def perimeter(self):
         return (4*self.side)
-    def diagonal(self) :
+
+    def diagonal(self):
         return ((2**0.5)*self.side)
 
 
@@ -57,11 +58,34 @@ class Circle():
     def area(self):
         return 22/7 * (self.radius**2)
 
-# Triangle is a bit confusing depending on the dimensions
-# class Triangle():
-#     def __init__(self, height, base, side1, side2, side3=0):
-#         if side3 == 0:
-#             side3 =base
+
+class Triangle():
+    def __init__(self):
+        pass
+
+    def area(self):
+        method = int(input('''
+how do u want to calculate the area
+1) b * h * 1/2
+2) heron's formula
+        '''))
+        if method == 2:
+            side1 = float(input('Enter the side'))
+            side2 = float(input('Enter the side'))
+            side3 = float(input('Enter the side'))
+            s = (side1 + side2 + side3) / 2
+            return (s * (s - side1) * (s - side2) * (s - side3))**0.5
+
+        else:
+            base = float(input('Enter the base'))
+            height = float(input('Enter the height'))
+            return 1 / 2 * base * height
+
+    def perimeter(self):
+        side1 = float(input('Enter the side'))
+        side2 = float(input('Enter the side'))
+        side3 = float(input('Enter the side'))
+        return side1 + side2 + side3
 
 
 # 3d figures
