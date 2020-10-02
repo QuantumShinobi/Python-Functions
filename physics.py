@@ -10,9 +10,14 @@ import datetime
 # Speed and Velocity
 
 
-def speed():
+def speed_input():
     distance = int(input("Enter the distance"))
     time = int(input("Enter th etime"))
+    return distance / time
+
+
+def speed(distance, time):
+
     return distance / time
 
 
