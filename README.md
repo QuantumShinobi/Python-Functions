@@ -1,7 +1,6 @@
 # Python functions
 
-Basic maths and science functions  :smiley:
-
+Basic maths and science functions
 
 Uses Travis CI (and our brain) for testing
 
